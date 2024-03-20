@@ -1,0 +1,227 @@
+/***** Google fonts *****/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+/***** Global css *****/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+}
+
+/***** header logo image *****/
+header {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    padding: 30px;
+}
+
+header img {
+    width: 150px;
+}
+
+/***** container for two div *****/
+.container {
+    padding-top: 100px;
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
+	align-items: center;
+	background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+/***** left inner container *****/
+.container .left-inner-container {
+    width: 100%;
+    padding: 50px 30px 0 30px;
+}
+
+.container .left-inner-container .main-heading {
+    font-size: 3.5rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: hsl(0, 36%, 70%);
+    line-height: 3.5rem;
+    letter-spacing: 0.5rem;
+}
+
+.container .main-heading span {
+    color: hsl(0, 6%, 24%);
+    font-weight: 700;
+}
+
+.container .left-inner-container p {
+    max-width: 450px;
+	text-align: center;
+	color: hsl(0, 36%, 70%);
+	font-size: .9rem;
+	line-height: 1.5rem;
+	margin: 20px auto 40px auto;
+}
+
+
+.container form {
+    position: relative;
+    display: block;
+    height: 50px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.container form label {
+	visibility: hidden;
+	position: absolute;
+}
+
+.container form input {
+    position: absolute;
+	width: 100%;
+	outline: none;
+	border: 1px solid hsl(0, 36%, 70%);
+	height: 100%;
+	border-radius: 50px;
+	padding-left: 30px;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.1rem;
+}
+
+.container form input::placeholder {
+    color: hsl(0, 36%, 70%);
+    opacity: 0.8;
+    font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.1rem;
+}
+
+.container form .error-icon {
+    display: inline-block;
+	position: absolute;
+	right: 85px;
+	top: 24%;
+	display: none;
+}
+
+.container form button {
+    cursor: pointer;
+	position: absolute;
+	right: 0;
+	border: none;
+	outline: none;
+	color: white;
+	width: 70px;
+	height: 100%;
+	border-radius: 50px;
+	background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+	box-shadow: 0px 0px 18px 1px #f4aaab82;
+	transition: .3s ease box-shadow;
+}
+
+.container form button:hover {
+    background-image: linear-gradient(hsl(0, 80%, 86%), hsl(0, 52%, 80%, 0.781));
+    box-shadow: 0px 0px 18px 1px #f4aaabbf;
+}
+
+.container form .text-error {
+    position: absolute;
+	left: 30px;
+	top: 40px;
+	font-size: 1rem;
+	display: none;
+}
+
+.container form.error .error-icon,
+.container form.error .text-error {
+    display: block;
+}
+
+.container form.error input {
+    border: 1px solid hsl(0, 93%, 68%);
+}
+
+
+/***** right inner container *****/
+.container .right-inner-container {
+    width: 100%;
+    height: 250px;
+    background-image: url("../images/hero-mobile.jpg");
+    background-size: cover;
+    /* for not repeating the image */
+}
+
+.container .right-inner-container img{
+    width: 100%;
+    height: 100%;
+}
+
+/***** frontend mentor footer css *****/
+footer{
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/***** media query css *****/
+@media only screen and (min-width: 768px) {
+    header {
+        padding-left: 10%;
+    }
+    .container {
+        flex-direction: row;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .container .left-inner-container {
+        padding-top: 28vh;
+		width: 100%;
+		height: 100vh;
+		padding-left: 10%;
+		background-image: url("../images/bg-pattern-desktop.svg");
+		background-size: cover;
+		background-position: center;
+    }
+
+    .container .right-inner-container {
+        width: 80%;
+        height: 100vh;
+        background-image: url("../images/hero-desktop.jpg");
+    }
+
+    .container .left-inner-container h1 {
+        text-align: left;
+        font-size: 4rem;
+        line-height: 5.5rem;
+    }
+
+    .container .left-inner-container p {
+        margin-left: 0;
+        font-size: 1.1rem;
+        text-align: left;
+    }
+
+    .container form {
+        margin-left: 0;
+    }
+
+    .container form button {
+        width: 80px;
+    }
+}
+
